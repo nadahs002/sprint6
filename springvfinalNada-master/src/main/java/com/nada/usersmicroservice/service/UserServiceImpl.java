@@ -3,6 +3,7 @@ package com.nada.usersmicroservice.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -40,8 +41,10 @@ public class UserServiceImpl implements UserService{
 //	}
 	@Override
 	public User saveUser(User user) {
-		Random rand = new Random();
-		String code = String.format("%04d", rand.nextInt(10000));
+		//Random rand = new Random();
+		//String code = String.format("%04d", rand.nextInt(10000));
+
+		String code= UUID.randomUUID().toString();
 
 
 
@@ -53,7 +56,7 @@ public class UserServiceImpl implements UserService{
 
 		msg.setText(     "Dear " + user.getUsername() + "," +
 				"\n\n" +
-				"Welcome to our world of series . To activate your account, please click on the following link: " +
+				"To activate your employee account, please click on the following link: " +
 				"\n\n" + activationURL +
 				"\n\n");
 		//msg.setText(code);

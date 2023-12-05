@@ -1,20 +1,13 @@
 package com.nada.usersmicroservice.restcontrollers;
-
-
-
 import java.util.List;
 import java.util.Optional;
-
 import com.nada.usersmicroservice.repos.UserRepository;
 import com.nada.usersmicroservice.service.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import com.nada.usersmicroservice.entities.Role;
 import com.nada.usersmicroservice.entities.User;
-
 import com.nada.usersmicroservice.service.UserService;
-
 
 @RequestMapping("")
 @RestController
